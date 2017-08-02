@@ -1,0 +1,43 @@
+import java.util.Arrays;
+
+public class Sort {
+
+	public static void main(String[] args) {
+		timeSortOfLength(1000);
+		timeSortOfLength(100);
+	}
+
+
+	private static void timeSortOfLength(int length) {
+		System.out.println("\nStarting Trial of length " + length + "\n");
+		int[] dataToSort = generateDataToSort(length);
+
+		System.out.println("Unsorted data:\n" + Arrays.toString(dataToSort));
+
+		long startTime = System.currentTimeMillis();
+		int[] sortedData = sort(dataToSort);
+		long endTime = System.currentTimeMillis();
+
+		System.out.println("Sorted data:\n" + Arrays.toString(sortedData));
+		System.out.println("Sorting took " + (endTime - startTime) + " milliseconds.\n");
+	}
+
+	private static int[] generateDataToSort(int length) {
+		int[] data = new int[length];
+
+		for (int i = 0; i < data.length; i++) {
+			data[i] = (int) (Math.random() * length);
+		}
+
+		return data;
+	}
+
+	private static int[] sort(int[] data) {
+		//
+		// Insert sorting algorithm code here.
+		//
+
+		return data;
+	}
+
+}
